@@ -1,0 +1,5 @@
+delete from products using products left join availabilities on products.id = availabilities.product_id where availabilities.id is null
+
+delete from stocks using stocks left join availabilities on stocks.id = availabilities.stock_id where availabilities.id is null
+
+delete from categories using categories left join products on categories.id = products.category_id where categories.id is null
